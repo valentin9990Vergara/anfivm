@@ -2,17 +2,19 @@
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #ffffff; /* Fondo blanco */
-    border-bottom: 2px solid #333; /* Borde en la parte inferior para remarcar */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombras suaves para darle profundidad */
+    justify-content: flex-start; /* Alinea todo a la izquierda */
+    padding: 5px 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Para que el logo y los enlaces se alineen más a la izquierda */
 .navbar-logo-section {
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin-right: 20px; /* Espacio entre el logo y los enlaces */
 }
 
 .navbar-logo {
@@ -22,14 +24,15 @@
 }
 
 .navbar-title {
-    font-family: 'Poppins', sans-serif; /* Fuente personalizada */
-    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #333; /* Color del texto */
+    color: #333;
 }
 
 .navbar-links {
     display: flex;
+    justify-content: center;
     gap: 20px;
     list-style: none;
     margin: 0;
@@ -39,18 +42,19 @@
 .navbar-links li {
     cursor: pointer;
     font-size: 1rem;
-    color: #333; /* Color de texto oscuro para los enlaces */
-    transition: color 0.3s; /* Efecto de transición al pasar el mouse */
+    color: #333;
+    transition: color 0.3s;
 }
 
 .navbar-links li:hover {
-    color: #007bff; /* Cambio de color al pasar el mouse */
-    border-bottom: 2px solid #007bff; /* Resaltar con un borde inferior al pasar el mouse */
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
 }
 
 .navbar-logo-section:hover {
-    opacity: 0.8; /* Efecto de opacidad al pasar el mouse sobre el logo */
+    opacity: 0.8;
 }
+
 
 .navbar-logo-section:hover img {
     opacity: 0.8;
