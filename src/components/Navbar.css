@@ -1,0 +1,58 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-bottom: 2px solid #333; /* Borde en la parte inferior para remarcar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombras suaves para darle profundidad */
+}
+
+.navbar-logo-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar-title {
+    font-family: 'Poppins', sans-serif; /* Fuente personalizada */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Color del texto */
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333; /* Color de texto oscuro para los enlaces */
+    transition: color 0.3s; /* Efecto de transición al pasar el mouse */
+}
+
+.navbar-links li:hover {
+    color: #007bff; /* Cambio de color al pasar el mouse */
+    border-bottom: 2px solid #007bff; /* Resaltar con un borde inferior al pasar el mouse */
+}
+
+.navbar-logo-section:hover {
+    opacity: 0.8; /* Efecto de opacidad al pasar el mouse sobre el logo */
+}
+
+.navbar-logo-section:hover img {
+    opacity: 0.8;
+    transform: scale(1.1); /* Le da un pequeño efecto de aumento al pasar el mouse */
+}
