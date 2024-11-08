@@ -1,0 +1,34 @@
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start; /* Alinea el contenido más arriba */
+    justify-content: flex-start;
+    color: #fff;
+    padding-left: 2rem;
+    padding-top: 3rem; /* Ajusta para una posición superior */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.home-content {
+    z-index: 1;
+    position: relative;
+    max-width: 400px;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    border: 2px solid #ffffff; /* Borde blanco para destacar */
+    border-radius: 8px; /* Esquinas redondeadas */
+    color: #ffffff; /* Color del texto */
+}

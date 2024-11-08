@@ -1,15 +1,20 @@
-// src/pages/Home.js
 import React from 'react';
-import Header from '../components/Navbar';
-
+import './Home.css'; // Asegúrate de que la ruta de Home.css esté correcta
 
 function Home() {
     return (
-        <div>
-            <Header />
-            <main>
-
-            </main>
+        <div className="home-container">
+            <video 
+                className="background-video"
+                src={`${process.env.PUBLIC_URL}/videos/videoANFI.mp4`}
+                autoPlay
+                loop
+                muted
+            />
+            <div className="home-content">
+                <h1>Bienvenidos a Anfiteatro Villa María</h1>
+                <p>Disfruta de nuestros eventos y servicios.</p>
+            </div>
         </div>
     );
 }
