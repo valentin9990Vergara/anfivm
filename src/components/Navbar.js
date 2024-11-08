@@ -14,11 +14,11 @@ function Navbar() {
         <nav className="navbar">
             <div className="navbar-logo-section" onClick={handleHomeClick}>
                 <img 
-                    src="/logoANFI.webp" // Asegúrate de que esta ruta sea correcta
+                    src="/logoANFI.webp" 
                     
                     className="navbar-logo"
                 />
-                <span className="navbar-title">Anfiteatro Villa María</span>
+                <span className="navbar-title">ANFI Villa María</span>
             </div>
             <ul className="navbar-links">
                 <li onClick={() => navigate('/about')}>Sobre Nosotros</li>

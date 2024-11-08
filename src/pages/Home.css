@@ -1,14 +1,14 @@
 .home-container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* Ocupar todo el alto de la pantalla */
     overflow: hidden;
     display: flex;
     align-items: flex-start; /* Alinea el contenido más arriba */
     justify-content: flex-start;
     color: #fff;
     padding-left: 2rem;
-    padding-top: 3rem; /* Ajusta para una posición superior */
+    padding-top: 5rem; /* Ajusta el padding superior para evitar que el contenido quede cubierto por el navbar */
 }
 
 .background-video {
@@ -18,17 +18,29 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.5;
-    z-index: -1;
+    opacity: 1.0; /* Opacidad del video */
+    z-index: -1; /* Asegura que el video quede detrás del contenido */
 }
 
 .home-content {
     z-index: 1;
     position: relative;
-    max-width: 400px;
-    padding: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
-    border: 2px solid #ffffff; /* Borde blanco para destacar */
-    border-radius: 8px; /* Esquinas redondeadas */
+    max-width: 600px; /* Ajusta el tamaño máximo del contenido */
+    padding: .8rem;
+    background-color: rgba(32, 32, 32, 0.755); /* Fondo oscuro semitransparente */
+    border: 4px solid #acd0e6; /* Borde blanco para destacar */
+    border-radius: 10px; /* Esquinas redondeadas */
     color: #ffffff; /* Color del texto */
+    margin-top: 1rem; /* Mueve el contenido más hacia arriba */
+    margin-left: 0.1rem; /* Mueve el contenido más hacia la izquierda */
+}
+
+.home-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.home-content p {
+    font-size: 1rem;
+    line-height: 1.6;
 }

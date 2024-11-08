@@ -1,15 +1,17 @@
-/* src/components/Navbar.css */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Alinea todo a la izquierda */
-    padding: 5px 20px;
-    background-color: #ffffff;
-    border-bottom: 2px solid #333;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con algo de transparencia */
+    position: fixed; /* Fija el navbar en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 2; /* Asegura que esté sobre el video */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Para que el logo y los enlaces se alineen más a la izquierda */
 .navbar-logo-section {
     display: flex;
     align-items: center;
@@ -18,7 +20,7 @@
 }
 
 .navbar-logo {
-    width: 40px;
+    width: 50px;
     height: auto;
     margin-right: 10px;
 }
@@ -51,12 +53,7 @@
     border-bottom: 2px solid #007bff;
 }
 
-.navbar-logo-section:hover {
-    opacity: 0.8;
-}
-
-
-.navbar-logo-section:hover img {
+.navbar-logo-section:hover  {
     opacity: 0.8;
     transform: scale(1.1); /* Le da un pequeño efecto de aumento al pasar el mouse */
 }
