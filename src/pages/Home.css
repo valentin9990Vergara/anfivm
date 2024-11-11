@@ -1,3 +1,4 @@
+/* General Container Styles */
 .home-container {
     position: relative;
     width: 100%;
@@ -12,17 +13,19 @@
     padding-top: 5rem;
 }
 
+/* Video Background */
 .background-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     object-fit: cover;
     opacity: 1.0;
     z-index: -1;
 }
 
+/* Home Content */
 .home-content {
     z-index: 1;
     position: relative;
@@ -37,12 +40,14 @@
     font-size: 0.9rem;
 }
 
+/* Home Description */
 .home-description {
     margin-top: 1rem;
     font-size: 0.8rem;
     color: #ffffff;
 }
 
+/* Home Buttons */
 .home-buttons {
     margin-top: 0.8rem;
 }
@@ -58,15 +63,16 @@
 }
 
 .btn-primary {
-    background-color: #6cdbd6b7; /* Color del botón principal */
+    background-color: #6cdbd6b7;
     color: #ffffff;
 }
 
 .btn-secondary {
-    background-color: #259dec; /* Color del botón secundario */
+    background-color: #259dec;
     color: #ffffff;
 }
 
+/* Carousel Controls */
 .carousel-controls {
     position: absolute;
     bottom: 8rem;
@@ -81,9 +87,9 @@
     color: #ffffff;
     border: none;
     font-size: 0.7rem;
-    padding: 0.rem;
+    padding: 0,5rem;
     cursor: pointer;
-    border-radius: 30%;
+    border-radius: 50%;
     transition: background-color 0.3s ease;
 }
 
@@ -91,21 +97,113 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Pause Button */
 .pause-btn {
     position: absolute;
     bottom: 8rem;
     left: 4rem;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo gris transparente */
-    color: #ffffff; /* Color blanco para el símbolo */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
     border: none;
     padding: 0.5rem;
-    font-size: 0.6rem; /* Tamaño del ícono */
+    font-size: 0.6rem;
     cursor: pointer;
-    border-radius: 30%; /* Bordes redondeados */
+    border-radius: 30%;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .pause-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo gris más oscuro al pasar el cursor */
-    transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets and Smaller Screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .home-container {
+        padding-left: 1.5rem;
+        padding-top: 4rem;
+    }
+
+    .home-content {
+        max-width: 80%;
+    }
+
+    .carousel-controls {
+        bottom: 6rem;
+        right: 3rem;
+    }
+
+    .pause-btn {
+        bottom: 6rem;
+        left: 3rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* For Small Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .home-container {
+        padding-left: 1rem;
+        padding-top: 3rem;
+    }
+
+    .background-video {
+        height: auto;
+    }
+
+    .home-content {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .carousel-controls {
+        bottom: 5rem;
+        right: 2rem;
+    }
+
+    .pause-btn {
+        bottom: 5rem;
+        left: 2rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* For Very Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .home-container {
+        padding-left: 0.5rem;
+        padding-top: 2rem;
+    }
+
+    .home-content {
+        font-size: 0.8rem;
+    }
+
+    .carousel-controls {
+        bottom: 4rem;
+        right: 1.5rem;
+    }
+
+    .pause-btn {
+        bottom: 4rem;
+        left: 1.5rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
 }
