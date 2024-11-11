@@ -1,14 +1,15 @@
 .home-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupar todo el alto de la pantalla */
+    height: 100vh;
     overflow: hidden;
     display: flex;
-    flex-direction: column; /* Para colocar los elementos en columna */
-    align-items: flex-start; /* Alinea el contenido hacia la izquierda */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     color: #fff;
     padding-left: 2rem;
-    padding-top: 5rem; /* Ajusta el padding superior para evitar que el contenido quede cubierto por el navbar */
+    padding-top: 5rem;
 }
 
 .background-video {
@@ -16,64 +17,94 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Ajusta el alto del video para ocupar menos espacio vertical */
     object-fit: cover;
-    opacity: 1.0; /* Opacidad del video */
-    z-index: -1; /* Asegura que el video quede detrás del contenido */
+    opacity: 1.0;
+    z-index: -1;
 }
 
 .home-content {
     z-index: 1;
     position: relative;
-    max-width: 600px; /* Ajusta el tamaño máximo del contenido */
-    padding: .8rem;
-    background-color: rgba(32, 32, 32, 0.755); /* Fondo oscuro semitransparente */
-    border: 4px solid #acd0e6; /* Borde blanco para destacar */
-    border-radius: 10px; /* Esquinas redondeadas */
-    color: #ffffff; /* Color del texto */
+    max-width: 1000px;
+    padding: 0.8rem;
+    background-color: rgba(32, 32, 32, 0.755);
+    border: 4px solid #54b4f07c;
+    border-radius: 10px;
+    color: #ffffff;
     margin-top: 1rem;
     margin-left: 0.1rem;
 }
 
 .home-description {
     margin-top: 1rem;
-    font-size: 0.9rem; /* Tamaño de texto más pequeño */
+    font-size: 0.9rem;
     color: #ffffff;
-    max-width: 600px;
 }
 
 .home-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 0.5rem;
 }
 
 .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #6cdbd6b7; /* Color del botón principal */
+    color: #ffffff;
 }
 
 .btn-secondary {
-    background-color: #28a745;
-    color: #fff;
+    background-color: #259dec; /* Color del botón secundario */
+    color: #ffffff;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 8rem;
+    right: 5rem;
+    display: flex;
+    gap: 0.6rem;
+    z-index: 2;
+}
+
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
     border: none;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
-    border-radius: 5px;
+    font-size: 0.7rem;
+    padding: 0.rem;
     cursor: pointer;
+    border-radius: 30%;
     transition: background-color 0.3s ease;
 }
 
-.btn-secondary:hover {
-    background-color: #218838;
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.pause-btn {
+    position: absolute;
+    bottom: 8rem;
+    left: 4rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo gris transparente */
+    color: #ffffff; /* Color blanco para el símbolo */
+    border: none;
+    padding: 0.5rem;
+    font-size: 0.6rem; /* Tamaño del ícono */
+    cursor: pointer;
+    border-radius: 30%; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pause-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo gris más oscuro al pasar el cursor */
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
 }
