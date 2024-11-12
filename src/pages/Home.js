@@ -22,7 +22,7 @@ const Home = () => {
 
     const [currentVideo, setCurrentVideo] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
-    const videoRef = useRef(null);  // Crear la referencia al video
+    const videoRef = useRef(null);
 
     const handleNext = () => {
         setCurrentVideo((prevVideo) => (prevVideo + 1) % videos.length);
@@ -36,9 +36,9 @@ const Home = () => {
 
     const togglePause = () => {
         if (isPaused) {
-            videoRef.current.play();  // Reanudar video
+            videoRef.current.play();
         } else {
-            videoRef.current.pause();  // Pausar video
+            videoRef.current.pause();
         }
         setIsPaused((prevPause) => !prevPause);
     };
@@ -55,11 +55,11 @@ const Home = () => {
     return (
         <div className="home-container">
             <video
-                ref={videoRef}  // Asignamos la referencia al video
+                ref={videoRef}
                 className="background-video"
                 src={videos[currentVideo].src}
                 autoPlay
-                loop={false}  // Opcional: si no quieres que se repita el video al final
+                loop={false}
                 muted
                 key={videos[currentVideo].src}
             />
@@ -71,8 +71,14 @@ const Home = () => {
                 {videos[currentVideo].description}
             </p>
             <div className="home-buttons">
-                <button className="btn-primary">Obtener Entradas</button>
-                <button className="btn-secondary">Saber Más</button>
+                <button className="button">
+                    <span>Obtener Entradas</span>
+                    <div className="button-overlay"></div>
+                </button>
+                <button className="button">
+                    <span>Saber Más</span>
+                    <div className="button-overlay"></div>
+                </button>
             </div>
             <div className="carousel-controls">
                 <button onClick={handlePrev} className="carousel-btn">❮</button>

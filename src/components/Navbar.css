@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: flex-start; /* Alinea todo a la izquierda */
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con algo de transparencia */
+    background-color: rgba(255, 255, 255, 0.753); /* Fondo blanco con algo de transparencia */
     position: fixed; /* Fija el navbar en la parte superior */
     top: 0;
     left: 0;
@@ -29,7 +29,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: #000000;
 }
 
 .navbar-links {
@@ -44,7 +44,7 @@
 .navbar-links li {
     cursor: pointer;
     font-size: 1rem;
-    color: #333;
+    color: #1b1b1b;
     transition: color 0.3s;
 }
 
