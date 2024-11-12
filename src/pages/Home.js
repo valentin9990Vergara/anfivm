@@ -75,7 +75,7 @@ const Home = () => {
                     <span>Obtener Entradas</span>
                     <div className="button-overlay"></div>
                 </button>
-                <button className="button">
+                <button className="button saber-mas">
                     <span>Saber Más</span>
                     <div className="button-overlay"></div>
                 </button>

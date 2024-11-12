@@ -57,10 +57,10 @@
     font-size: 10px;
     border-radius: 12px;
     background: linear-gradient(
-      180deg,
-      rgb(6, 154, 173) 0%,
-      rgb(36, 36, 36) 66%,
-      rgb(194, 62, 62) 100%
+        180deg,
+        rgb(6, 154, 173) 0%,
+        rgb(36, 36, 36) 66%,
+        rgb(194, 62, 62) 100%
     );
     color: rgb(218, 218, 218);
     border: none;
@@ -70,13 +70,14 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease; /* Efecto de escala */
-  }
-  
-  .button:hover {
+    margin: 0 10px; /* Aumento del espacio entre botones */
+}
+
+.button:hover {
     transform: scale(1.05); /* Escala al pasar el mouse */
-  }
-  
-  .button span {
+}
+
+.button span {
     border-radius: 10px;
     padding: 0.8em 1.3em;
     padding-right: 1.2em;
@@ -92,56 +93,60 @@
         at 95% 89%,
         rgb(15, 15, 15) 0px,
         transparent 50%
-      ),
-      radial-gradient(at 0% 100%, rgb(17, 17, 17) 0px, transparent 50%),
-      radial-gradient(at 0% 0%, rgb(29, 29, 29) 0px, transparent 50%);
-  }
-  
-  .button:hover span {
-    background-color: rgb(26, 25, 25);
+    ),
+    radial-gradient(at 0% 100%, rgb(17, 17, 17) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, rgb(29, 29, 29) 0px, transparent 50%);
+}
+
+.button:hover span {
+    background-color: rgba(23, 70, 82, 0.63);
     animation: pulse 0.6s infinite; /* Animación de pulsación */
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
     50% {
-      transform: scale(1.05);
+        transform: scale(1.05);
     }
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
-  .button-overlay {
+}
+
+.button-overlay {
     position: absolute;
     inset: 0;
     pointer-events: none;
     background: repeating-conic-gradient(
         rgb(48, 47, 47) 0.0000001%,
         rgb(51, 51, 51) 0.000104%
-      )
-      60% 60%/600% 600%;
+    )
+    60% 60%/600% 600%;
     filter: opacity(10%) contrast(105%);
     -webkit-filter: opacity(10%) contrast(105%);
     transition: opacity 0.3s ease; /* Transición suave de la superposición */
-  }
-  
-  .button:hover .button-overlay {
+}
+
+.button:hover .button-overlay {
     opacity: 0.3; /* Cambia la opacidad de la superposición al pasar el mouse */
-  }
-  
-  .button svg {
+}
+
+.button svg {
     width: 15px;
     height: 15px;
     transition: transform 0.3s ease; /* Movimiento del SVG */
-  }
-  
-  .button:hover svg {
+}
+
+.button:hover svg {
     transform: translateX(5px); /* Movimiento SVG en hover */
-  }
-  
+}
+
+
+.saber-mas {
+    margin-left: 10px; /* Alineación hacia la derecha */
+}
 
 /* Botones de Carrusel */
 .carousel-controls {
