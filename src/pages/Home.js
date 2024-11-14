@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Home.css';
+import img1 from '../assets/images/img1.jpg';
+import img2 from '../assets/images/img2.jpg';
+import img3 from '../assets/images/img3.jpg';
 
 const Home = () => {
     const videos = [
@@ -32,6 +35,13 @@ const Home = () => {
         setCurrentVideo((prevVideo) =>
             prevVideo === 0 ? videos.length - 1 : prevVideo - 1
         );
+    };
+
+    const handleThumbnailClick = (index) => {
+        setCurrentVideo(index);
+        if (!isPaused) {
+            videoRef.current.play();
+        }
     };
 
     const togglePause = () => {
@@ -79,6 +89,26 @@ const Home = () => {
                     <span>Saber Más</span>
                     <div className="button-overlay"></div>
                 </button>
+            </div>
+            <div className="thumbnail-controls">
+            <img
+                    src={img1}
+                    alt="Video 1"
+                    onClick={() => handleThumbnailClick(0)}
+                    className={currentVideo === 0 ? 'active' : ''}
+                />
+                <img
+                    src={img2}
+                    alt="Video 2"
+                    onClick={() => handleThumbnailClick(1)}
+                    className={currentVideo === 1 ? 'active' : ''}
+                />
+                <img
+                    src={img3}
+                    alt="Video 3"
+                    onClick={() => handleThumbnailClick(2)}
+                    className={currentVideo === 2 ? 'active' : ''}
+                />
             </div>
             <div className="carousel-controls">
                 <button onClick={handlePrev} className="carousel-btn">❮</button>
