@@ -10,8 +10,11 @@ function Navbar() {
     };
 
     const handleCalendarClick = () => {
-        // Navegará a la página de "Calendario" cuando esté disponible
-        navigate('/calendar');
+        console.log("Botón 'Calendario' presionado");
+    };
+
+    const handleLiveClick = () => {
+        console.log("Botón 'En Vivo' presionado");
     };
 
     return (
@@ -29,9 +32,14 @@ function Navbar() {
                 <li onClick={() => navigate('/services')}>Servicios</li>
                 <li onClick={() => navigate('/contact')}>Contacto</li>
             </ul>
-            <button className="navbar-calendar-button" onClick={handleCalendarClick}>
-            📅
-            </button>
+            <div className="navbar-buttons">
+                <button className="navbar-calendar-button" onClick={handleCalendarClick}>
+                    📅
+                </button>
+                <button className="navbar-live-button" onClick={handleLiveClick}>
+                    En Vivo
+                </button>
+            </div>
         </nav>
     );
 }

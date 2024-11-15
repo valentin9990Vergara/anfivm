@@ -57,40 +57,79 @@
     opacity: 0.8;
     transform: scale(1.1); /* Le da un pequeño efecto de aumento al pasar el mouse */
 }
+/* Contenedor de botones */
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre los botones */
+    margin-left: auto; /* Empuja los botones hacia la derecha */
+    margin-right: 40px; /* Ajusta su posición hacia la izquierda */
+}
 
-
-
-
-/* From Uiverse.io by niat786 */ 
+/* Botón "Calendario" */
 .navbar-calendar-button {
-    border: 1;
+    border: none;
     color: #fff;
     background-image: linear-gradient(30deg, #47b0c3, #457ee1);
     border-radius: 10px;
     background-size: 100% auto;
     font-family: inherit;
     font-size: 17px;
-    padding: 0.7em 1.9em;
-    margin-left: 580px;
-   }
-   
-   .navbar-calendar-button:hover {
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-calendar-button:hover {
     background-position: right center;
     background-size: 200% auto;
     -webkit-animation: pulse 2s infinite;
     animation: pulse512 1.5s infinite;
-   }
-   
-   @keyframes pulse512 {
+}
+
+@keyframes pulse512 {
     0% {
-     box-shadow: 0 0 0 0 #056ee666;
+        box-shadow: 0 0 0 0 #056ee666;
     }
-   
     70% {
-     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
     }
-   
     100% {
-     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+        box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
     }
-   }
+}
+
+/* Botón "En Vivo" */
+.navbar-live-button {
+    border: none;
+    color: #fff;
+    background-color: #e63946; /* Rojo */
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.navbar-live-button:hover {
+    background-color: #d62828; /* Rojo más oscuro al pasar el mouse */
+    transform: scale(1.1); /* Efecto de aumento */
+}
+
+/* Estilo responsive */
+@media (max-width: 768px) {
+    .navbar-calendar-button,
+    .navbar-live-button {
+        font-size: 14px;
+        padding: 0.5em 1.5em;
+    }
+
+    .navbar-buttons {
+        margin-right: 10px; /* Ajusta su posición en pantallas pequeñas */
+    }
+
+    .navbar-links {
+        gap: 10px;
+    }
+}
