@@ -37,7 +37,7 @@ function Navbar() {
                     📅
                 </button>
                 <button className="navbar-live-button" onClick={handleLiveClick}>
-                    En Vivo
+                🎝 En Vivo 🎝
                 </button>
             </div>
         </nav>

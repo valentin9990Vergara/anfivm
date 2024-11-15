@@ -78,6 +78,7 @@
     padding: 0.7em 1.5em;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-right: 10px;
 }
 
 .navbar-calendar-button:hover {
@@ -99,23 +100,57 @@
     }
 }
 
-/* Botón "En Vivo" */
+/* Botón "En Vivo" *
+/* From Uiverse.io by cssbuttons-io */ 
 .navbar-live-button {
-    border: none;
-    color: #fff;
-    background-color: #e63946; /* Rojo */
-    border-radius: 10px;
-    font-family: inherit;
-    font-size: 17px;
-    padding: 0.7em 1.5em;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+    --glow-color: rgba(253, 5, 5, 0.756);
+    --glow-spread-color: rgba(204, 191, 190, 0.421);
+    --enhanced-glow-color: rgb(40, 122, 210);
+    --btn-color: rgb(212, 198, 198);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   
+   .navbar-live-button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   .navbar-live-button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   .navbar-live-button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
 
-.navbar-live-button:hover {
-    background-color: #d62828; /* Rojo más oscuro al pasar el mouse */
-    transform: scale(1.1); /* Efecto de aumento */
-}
 
 /* Estilo responsive */
 @media (max-width: 768px) {
